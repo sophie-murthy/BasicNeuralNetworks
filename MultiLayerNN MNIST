@@ -80,13 +80,6 @@ def load_mnist():
         probabilities, a1  = self.forward(X)
         predictions = np.argmax(probabilities, axis=1)
         return predictions
-
-    # def accuracy(self, X, y):
-    #     prob, a1 = self.forward(X)
-    #     pred = np.argmax(prob, 1)
-    #     y1 = np.argmax(y, 1)
-    #     accuracy = np.mean(pred == y1)
-    #     return accuracy
     
     def accuracy(self, X, y):
         prob, a1 = self.forward(X)
