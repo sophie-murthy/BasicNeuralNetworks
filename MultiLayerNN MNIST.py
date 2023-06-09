@@ -10,12 +10,12 @@ def load_mnist():
     x_test = x_test / 255.0
     return x_train, y_train, x_test, y_test
     
- def one_hot(labels):
+def one_hot(labels):
     num_classes = np.max(labels) + 1
     encoded_labels = np.eye(num_classes)[labels]
     return encoded_labels
     
- class NeuralNetwork:
+class NeuralNetwork:
 
     def __init__(self):
         self.hidden_units = 256
@@ -87,6 +87,7 @@ def load_mnist():
         y1 = np.argmax(y, 1)
         accuracy = np.mean(pred == y1)
         return accuracy
+    
 
 model = NeuralNetwork()
 
